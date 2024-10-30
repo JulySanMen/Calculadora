@@ -14,3 +14,7 @@ for (let i = 0; i < tamanoarray; i++) {
   }
 }
 console.log(numMax);
+
+//otro metodo
+let maximo = Math.max(2, 3, 6, 1, 8, 4);
+console.log(maximo);
