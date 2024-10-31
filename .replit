@@ -1,8 +1,9 @@
-modules = ["nodejs-20", "python-3.11"]
-run = "calcu.js"
+modules = ["php"]
+run = "php -S 0.0.0.0:8000 calcu.php"
 
 [nix]
 channel = "stable-24_05"
 
-[deployment]
-run = ["sh", "-c", "calcu.js"]
+[[ports]]
+localPort = 8000
+externalPort = 8000
