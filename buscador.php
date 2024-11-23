@@ -1,41 +1,55 @@
 <?php
-// pediremos recomendaciones de lugares de Colombia de acuerdo con su clima, ubicación o atractivo turístico
+/***************************
+Tener una lista de ciudades
+con un clima y una ubicacion
+especifica
+***************************/
 
-funcion recomendacion($busqueda, $tipo){
-  $clima = array(
-        'Bogota' => 'frio',
-        'Monteria' => 'calido',
-        'Medellin' => 'templado'
-  );
-  $ubicacion = array(
-        'Guajira' => 'Norte',
-        'Leticia' => 'Sur',
-        'Santander' => 'Este',
-        'Antioquia' => 'Oeste'
-  );
+function recomendacion($caracteristica, $tipoCaracteristica){
 
-  $turismo = array(
-        'Santa Marta' => 'Mar',
-        'Villavicencio' => 'Llano',
-        'Riohacha' => 'Desierto',
-        'Quindio' => 'Valle'
+  $weather = array(
+    "Bogota" => "frio",
+    "Monteria" => "calido",
+    "Medellin" => "templado"
   );
 
-      switch($busqueda)
-        {
-          case 'clima':
-            echo array_search($tipo, $clima);
-          break;
-          case 'ubicacion':
-            echo array_search($tipo, $ubicacion);
-          break;
-          case 'turismo':
-            echo array_search($tipo, $clima);
-          break;
-      }
+  $location = array(
+    "Guajira" => "norte",
+    "Leticia" => "sur",
+    "Santander" => "este",
+    "Antioquia" => "oeste"
+  );
+
+  $tourism = array(
+    "Santa Marta" => "mar",
+    "Villavicencio" => "llanos",
+    "Riohacha" => "desierto",
+    "Quindio" => "valle"
+  );
+
+  switch($tipoCaracteristica){
+    case "clima":
+      echo array_search($caracteristica, $weather);
+      break;
+    case "ubicacion":
+      echo array_search($caracteristica, $location);
+      break;
+    case "turismo":
+      echo array_search($caracteristica, $tourism);
+      break;
+    default:
+      echo "No fue posible encontrar una ciudad con esas caracteristicas o criterios de busqueda, por favor intente nuevamente";
+      break;
   }
-
-  process("clima", "frio");
 }
+
+/***********************************************
+Se debe invocar la función recomendación
+con teniendo en cuenta que el primer parámetro
+de la función es la característica de la ciudad
+y el segundo parámetro es el nombre del caso del
+switch en el cual se va a buscar
+************************************************/
+recomendacion("valle", "turismo");
 
 ?>
