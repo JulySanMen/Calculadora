@@ -1,5 +1,5 @@
 modules = ["php"]
-run = "php -S 0.0.0.0:8000 calcu.php"
+run = "php -S 0.0.0.0:8000 buscador.php"
 
 [nix]
 channel = "stable-24_05"
