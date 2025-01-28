@@ -1,8 +1,8 @@
 <?php 
 print_r("<ul>");
 function suma(){
-  $a = 8;
-  $b = 6;
+  $a = 9;
+  $b = 2;
   $suma = $a + $b;
   print_r("<li>8+6=".$suma."</li>");
     }
