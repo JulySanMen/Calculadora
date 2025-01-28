@@ -1,7 +1,7 @@
 #Operaciones basicas
 
-valor1 = 2
-valor2 = 4
+valor1 = 5
+valor2 = 5
 
 suma = valor1 + valor2
 resta = valor1 - valor2
