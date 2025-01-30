@@ -1,6 +1,6 @@
 #Extraer un substring 
 
-oracion = "se acerca navidad"
+oracion = "se acercan tiempos obscuros"
 puntoinicio = 10
 puntofinal = 17
 
